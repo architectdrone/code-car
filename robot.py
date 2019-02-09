@@ -10,6 +10,13 @@ IN3 = 20
 IN4 = 21
 ENB = 26
 
+#Setup GPIO
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(IN1, GPIO.OUT)
+GPIO.setup(IN2, GPIO.OUT)
+GPIO.setup(IN3, GPIO.OUT)
+GPIO.setup(IN4, GPIO.OUT)
+
 SECONDS_PER_1_ROTATION = 3.2 #We need to do some calibration of this.
 
 def _convertRotationsToSeconds(rotations):
