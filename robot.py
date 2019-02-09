@@ -10,6 +10,13 @@ IN3 = 20
 IN4 = 21
 ENB = 26
 
+#Port Lists
+#A list of ports corresponding to an action.
+FORWARD = [IN1, IN4]
+BACKWARD = [IN2, IN3]
+LEFT = [IN4]
+RIGHT = [IN1]
+
 #Setup GPIO
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(IN1, GPIO.OUT)
