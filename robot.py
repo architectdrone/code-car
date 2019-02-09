@@ -3,7 +3,12 @@ import time
 
 SECONDS_PER_1_ROTATION = 3.2 #We need to do some calibration of this.
 
-def convertRotationsToSeconds(rotations):
+def _convertRotationsToSeconds(rotations):
+    '''
+    Converts a number of rotations into seconds, which can be used by the hardware.
+    @param rotations Rotations to convert.
+    @return Float number of seconds. 
+    '''
     global SECONDS_PER_1_ROTATION
     return rotations*SECONDS_PER_1_ROTATION
 
