@@ -19,6 +19,20 @@ GPIO.setup(IN4, GPIO.OUT)
 
 SECONDS_PER_1_ROTATION = 3.2 #We need to do some calibration of this.
 
+def _run(port):
+    '''
+    PRIVATE: Starts driving power to the given pin.
+    @param port The port to drive to.
+    '''
+    GPIO.output(port, GPIO.HIGH)
+
+def _halt(port):
+    '''
+    PRIVATE: Stops driving power to the given pin.
+    @param port The port to stop driving to.
+    '''
+    GPIO.output(port, GPIO.LOW)
+
 def _convertRotationsToSeconds(rotations):
     '''
     Converts a number of rotations into seconds, which can be used by the hardware.
