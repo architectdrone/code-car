@@ -67,14 +67,16 @@ def forward(rotations):
     Causes the robot to go forward by the number of rotations specified.
     @param rotations Number of rotations to go forward.
     '''
-    raise NotImplementedError
+    global FORWARD
+    _runForGivenTime(FORWARD, _convertRotationsToSeconds(rotations))
 
 def backward(rotations):
     '''
     Causes the robot to go backward by the number of rotations specified.
     @param rotations Number of rotations to go backward.
     '''
-    raise NotImplementedError
+    global BACKWARD
+    _runForGivenTime(BACKWARD, _convertRotationsToSeconds(rotations))
 
 def left():
     '''
