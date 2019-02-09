@@ -1,5 +1,5 @@
 import incomingInstruction as incoming
-
+import time
 def control():
     '''
     Main controlling function for the robot. Either executes a block of instructions, or performs some predefined idle functionality.
@@ -37,4 +37,40 @@ def execute(toExecute):
         else:
             raise KeyError(f"Unrecognized command {i['command']}.")
     
+def forward(rotations):
+    '''
+    Causes the robot to go forward by the number of rotations specified.
+    @param rotations Number of rotations to go forward.
+    '''
 
+    raise NotImplementedError
+
+def backward(rotations):
+    '''
+    Causes the robot to go backward by the number of rotations specified.
+    @param rotations Number of rotations to go backward.
+    '''
+
+    raise NotImplementedError
+
+def left():
+    '''
+    Turn left.
+    '''
+
+    raise NotImplementedError
+
+def right():
+    '''
+    Turn right.
+    '''
+
+    raise NotImplementedError
+
+def stop(seconds):
+    '''
+    Stop for a certain number of seconds.
+    @param seconds Number of seconds to stop.
+    '''
+
+    time.sleep(seconds)
