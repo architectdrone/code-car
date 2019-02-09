@@ -2,6 +2,15 @@
 import time
 import RPi.GPIO as GPIO
 
+'''
+The only functions you need are:
+-forward(int revolutions)
+-backward(int revolutions)
+-turnLeft()
+-turnRight()
+-stop()
+'''
+
 #GLOBALS: You set this.
 #GPIO
 IN1 = 12
