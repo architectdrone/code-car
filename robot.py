@@ -8,7 +8,7 @@ The only functions you need are:
 -backward(int revolutions)
 -turnLeft()
 -turnRight()
--stop()
+-stop(time)
 '''
 
 #GLOBALS: You set this.

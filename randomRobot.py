@@ -21,9 +21,16 @@ GPIO.setup(P5, GPIO.IN)
 seconds_per_degree = robot.SECONDS_FOR_QUARTER_TURN/90
 
 def _turnLeftDegrees(degrees):
+    '''
+    Turns left by a number of degrees.
+    '''
     global seconds_per_degree
     robot._runForGivenTime(robot.LEFT, degrees*seconds_per_degree)
 
 def _turnRightDegrees(degrees):
+    '''
+    Turns right by a number of degrees.
+    '''
     global seconds_per_degree
     robot._runForGivenTime(robot.RIGHT, degrees*seconds_per_degree)
+
