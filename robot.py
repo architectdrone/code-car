@@ -24,7 +24,9 @@ GPIO.setup(IN2, GPIO.OUT)
 GPIO.setup(IN3, GPIO.OUT)
 GPIO.setup(IN4, GPIO.OUT)
 
+#Calibration
 SECONDS_PER_1_ROTATION = 3.2 #We need to do some calibration of this.
+SECONDS_FOR_QUARTER_TURN = 3.4 #Also needs calibration
 
 def _run(port):
     '''
@@ -82,13 +84,17 @@ def left():
     '''
     Turn left.
     '''
-    raise NotImplementedError
+    global LEFT
+    global SECONDS_FOR_QUARTER_TURN
+    _runForGivenTime(LEFT, SECONDS_FOR_QUARTER_TURN)
 
 def right():
     '''
     Turn right.
     '''
-    raise NotImplementedError
+    global RIGHT
+    global SECONDS_FOR_QUARTER_TURN
+    _runForGivenTime(RIGHT, SECONDS_FOR_QUARTER_TURN)
 
 def stop(seconds):
     '''
