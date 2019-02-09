@@ -33,6 +33,19 @@ def _halt(port):
     '''
     GPIO.output(port, GPIO.LOW)
 
+def _runForGivenTime(portList, time):
+    '''
+    PRIVATE: runs a list of ports, for a given amount of time, before stopping them.
+    @param portList A list of ints specifing ports to run.
+    @param time Amount of time to run the ports.
+    '''
+    for i in portList:
+        _run(i)
+    time.sleep(time)
+    for i in portList:
+        _halt(i)
+
+
 def _convertRotationsToSeconds(rotations):
     '''
     Converts a number of rotations into seconds, which can be used by the hardware.
