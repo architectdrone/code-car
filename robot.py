@@ -24,10 +24,10 @@ SECONDS_FOR_QUARTER_TURN = 3.4 #Also needs calibration
 
 #SETUP GPIO
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(IN1, GPIO.OUT)
-GPIO.setup(IN2, GPIO.OUT)
-GPIO.setup(IN3, GPIO.OUT)
-GPIO.setup(IN4, GPIO.OUT)
+GPIO.setup(IN1, GPIO.IN)
+GPIO.setup(IN2, GPIO.IN)
+GPIO.setup(IN3, GPIO.IN)
+GPIO.setup(IN4, GPIO.IN)
 
 #PUBLIC
 def forward(rotations):
