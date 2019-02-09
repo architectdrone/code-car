@@ -18,29 +18,12 @@ GPIO.setup(P24, GPIO.IN)
 GPIO.setup(P23, GPIO.IN)
 GPIO.setup(P5, GPIO.IN)
 
-def forwardCheck():
-    '''
-    Checks the sensors to see if we are close to an object.
-    @return True if we are too close, False if we are good.
-    '''
-    if GPIO.input(P25) or GPIO.input(P24) or GPIO.input(P23) or GPIO.input(P5): 
-        return True
-    return False
+seconds_per_degree = robot.SECONDS_FOR_QUARTER_TURN/90
 
+def _turnLeftDegrees(degrees):
+    global seconds_per_degree
+    robot._runForGivenTime(robot.LEFT, degrees*seconds_per_degree)
 
-while True:
-    if forwardCheck(): #Check if we need to retreat.
-        robot.backward(CHECK_INCREMENT)
-    
-    choice = random.randint(0, 3)
-    if choice == 0:
-        robot.forward(CHECK_INCREMENT) #We go forward until it is time to check surroundings.
-    elif choice == 1:
-        robot.backward(CHECK_INCREMENT)
-    elif choice == 2:
-        robot._runForGivenTime(robot.LEFT, random.randint(0, MAX_SPIN_TIME))
-    elif choice == 3:
-        robot._runForGivenTime(robot.RIGHT, random.randint(0, MAX_SPIN_TIME))
-    
-
-
+def _turnRightDegrees(degrees):
+    global seconds_per_degree
+    robot._runForGivenTime(robot.RIGHT, degrees*seconds_per_degree)
