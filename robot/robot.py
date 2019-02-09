@@ -1,5 +1,14 @@
 import incomingInstruction as incoming
 import time
+
+def run():
+    '''
+    Runs the main loop.
+    '''
+
+    while True:
+        control()
+
 def control():
     '''
     Main controlling function for the robot. Either executes a block of instructions, or performs some predefined idle functionality.
