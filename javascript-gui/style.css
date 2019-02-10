@@ -1,0 +1,52 @@
+* {
+  font-family: monospace;
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+}
+
+ul#stack {
+  list-style: none;
+  min-height: 2em;
+  padding: 0.5em;
+  margin: auto;
+}
+
+fieldset {
+  width: 680px;
+  min-height: 5em;
+  margin: 1em auto;
+  padding: 0.5em;
+}
+
+ul#stack li {
+  padding: 0;
+  margin: 0;
+}
+
+ul#stack li::before {
+  content: ">> ";
+}
+
+input[type="text"] {
+  height: 2xs;
+}
+
+label {
+  display: inline-block;
+  width: 140px;
+  text-align: right;
+}
+
+div#funcDoc {
+  margin-top: 1em;
+}
+
+#push, #pop {
+  height: 2xs;
+  padding: 0 1em;
+  margin: 0 1em;
+  float:right;
+}

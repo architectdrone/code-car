@@ -1,0 +1,17 @@
+{
+  "name": "HackKu",
+  "version": "0.0.0",
+  "description": "hackku code-car project",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "websocket": "^1.0.28"
+  },
+  "scripts": {
+    "test": "run ."
+  },
+  "author": "ian hierl",
+  "license": "ISC"
+}

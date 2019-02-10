@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <title>CodeCar for HackKU 2019</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main>
+      <fieldset>
+        <legend>Function Library</legend>
+        <label for="funcSel">Select function: </label>
+	<select id="funcSel" name="funcSel">
+          <option value="" selected hidden disabled>
+          <option value="forward">forward( distance )</option>
+          <option value="backward">backward( distance )</option>
+	  <option value="turnLeft">turnLeft( )</option>
+	  <option value="turnRight">turnRight( )</option>
+        </select>
+
+        <button id="pop" disabled>Remove Function</button>
+        <button id="push" disabled>Add Function</button>
+        <div id="argList"></div>
+        <div id="funcDoc"></div>
+      </fieldset>
+    </main>
+    <fieldset>
+      <legend>Current Function Stack:</legend>
+      <ul id="stack"></ul>
+    </fieldset>
+    <button id="commit">Send to AlphaBot</button>
+    <script src="client.js"></script>
+  </body>
+</html>
