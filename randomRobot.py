@@ -18,6 +18,11 @@ GPIO.setup(P24, GPIO.IN)
 GPIO.setup(P23, GPIO.IN)
 GPIO.setup(P5, GPIO.IN)
 
+FAR_LEFT = P25
+MIDDLE_LEFT = P24
+MIDDLE_RIGHT = P23
+FAR_RIGHT = P5
+
 seconds_per_degree = robot.SECONDS_FOR_QUARTER_TURN/90
 
 def _turnLeftDegrees(degrees):
@@ -34,3 +39,9 @@ def _turnRightDegrees(degrees):
     global seconds_per_degree
     robot._runForGivenTime(robot.RIGHT, degrees*seconds_per_degree)
 
+def move():
+    #Do checking for collision avoidance.
+    INPUT_FAR_LEFT = GPIO.input(FAR_LEFT)
+    INPUT_MIDDLE_LEFT = GPIO.input(FAR_LEFT)
+    INPUT_FAR_LEFT = GPIO.input(FAR_LEFT)
+    INPUT_FAR_LEFT = GPIO.input(FAR_LEFT)
